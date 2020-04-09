@@ -1,0 +1,3 @@
+﻿Class pgClinicReport
+
+End Class

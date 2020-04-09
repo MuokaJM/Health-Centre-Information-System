@@ -1,0 +1,26 @@
+﻿<Page x:Class="pgMyQueue"
+      xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+      xmlns:Behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="700"
+      Title="My Queue">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="250*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+        <DockPanel Margin="10" Grid.Row="1">
+            <DataGrid x:Name="dgQueue" Margin="0,10"/>
+        </DockPanel>
+        <Label Content="_Search" HorizontalAlignment="Left" Height="32" Margin="10,10,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox Controls:TextBoxHelper.Watermark="Enter what to search here" x:Name="txtSearch" HorizontalAlignment="Left" Height="30" Margin="135,7,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="160"  BorderBrush="{DynamicResource AccentColorBrush}"/>
+        <Label x:Name="lblRecNo" Content="" Height="30" Margin="420,7,0,0" VerticalAlignment="Top" Width="270"/>
+
+    </Grid>
+</Page>

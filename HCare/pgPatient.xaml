@@ -1,0 +1,140 @@
+﻿<Page x:Class="pgPatient"
+      xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+      xmlns:Behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="700"
+      Title="pgPatient">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="120*"/>
+            <ColumnDefinition Width="176*"/>
+            <ColumnDefinition Width="120*"/>
+            <ColumnDefinition Width="139*"/>
+            <ColumnDefinition Width="145*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Patient Number" Height="30" Margin="13,12,10,8" Grid.Column="2" VerticalAlignment="Center"/>
+        <Label x:Name="lblPNo" Margin="10" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" BorderThickness="0" Grid.Column="3"/>
+        <Label Content="Date" Height="30" Margin="10,12,83,8" Grid.Column="4" VerticalAlignment="Center"/>
+        <Label Content="S_urname" Height="30" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Center" Width="106" HorizontalContentAlignment="Stretch" HorizontalAlignment="Left"/>
+        <TextBox Controls:TextBoxHelper.Watermark="Surname" x:Name="txtSName" Margin="10" Grid.Row="1" TextWrapping="Wrap" Grid.Column="1" HorizontalContentAlignment="Stretch" TabIndex="5" BorderBrush="{DynamicResource AccentColorBrush}"/>
+        <Label Content="_Other Names" Height="30" Margin="5,10,0,0" Grid.Row="1" VerticalAlignment="Center" Width="99" Grid.Column="2" HorizontalContentAlignment="Stretch"/>
+        <TextBox Controls:TextBoxHelper.Watermark="Other Names" x:Name="txtONames" Margin="10" Grid.Row="1" TextWrapping="Wrap" Grid.Column="3" Grid.ColumnSpan="2" HorizontalContentAlignment="Stretch" TabIndex="6" BorderBrush="{DynamicResource AccentColorBrush}"/>
+        <Label Content="S_ex" Height="30" Margin="10,10,0,0" Grid.Row="2" VerticalAlignment="Center" Width="106" HorizontalContentAlignment="Stretch" HorizontalAlignment="Left"/>
+        <RadioButton x:Name="optMale" Content="Male" Height="30" Margin="10,10,0,0" Grid.Row="2" VerticalAlignment="Center" Width="58" GroupName="Sex" Grid.Column="1" HorizontalAlignment="Left" TabIndex="7"/>
+        <RadioButton x:Name="optFemale" Content="Female" Height="30" Margin="0,15,7,5" Grid.Row="2" VerticalAlignment="Center" Width="65" GroupName="Sex" Grid.Column="1" HorizontalContentAlignment="Right" HorizontalAlignment="Right" TabIndex="8"/>
+        <Label Content="_Date of Birth" Height="30" Margin="10,10,0,0" Grid.Row="2" VerticalAlignment="Center" Width="99" Grid.Column="2" HorizontalContentAlignment="Stretch"/>
+        <DatePicker x:Name="dtpDoB" Margin="10" Grid.Row="2" Grid.Column="3" HorizontalContentAlignment="Stretch" TabIndex="9" BorderBrush="{DynamicResource AccentColorBrush}"/>
+        <Label Content="S_ub Location" Height="30" Margin="10,10,0,0" Grid.Row="3" VerticalAlignment="Center" Width="106" HorizontalContentAlignment="Stretch" HorizontalAlignment="Left"/>
+        <TextBox Controls:TextBoxHelper.Watermark="Sub Location" x:Name="txtSLocation" Margin="10" Grid.Row="3" TextWrapping="Wrap" Grid.Column="1" HorizontalContentAlignment="Stretch" TabIndex="11"  BorderBrush="{DynamicResource AccentColorBrush}"/>
+        <Label Content="_Address" Height="30" Margin="10,10,0,0" Grid.Row="3" VerticalAlignment="Center" Width="99" Grid.Column="2" HorizontalContentAlignment="Stretch"/>
+        <TextBox Controls:TextBoxHelper.Watermark="Address" x:Name="txtAddress" Margin="10" Grid.Row="3" TextWrapping="Wrap" Grid.Column="3" Grid.ColumnSpan="2" HorizontalContentAlignment="Stretch" TabIndex="12" BorderBrush="{DynamicResource AccentColorBrush}"/>
+        <Label Content="_Telephone" Height="30" Margin="10,10,0,0" Grid.Row="4" VerticalAlignment="Center" Width="106" HorizontalContentAlignment="Stretch" HorizontalAlignment="Left"/>
+        <TextBox Controls:TextBoxHelper.Watermark="Telephone" x:Name="txtPhone" Margin="10" Grid.Row="4" TextWrapping="Wrap" Grid.Column="1" HorizontalContentAlignment="Stretch" TabIndex="13" BorderBrush="{DynamicResource AccentColorBrush}"/>
+        <Label x:Name="lblToday" Content="" Grid.Column="4" Height="30" Margin="67,10,12,10" VerticalAlignment="Center"/>
+        <Label x:Name="lblRecNo" Content="" Grid.Column="4" Height="30" Grid.Row="4" VerticalAlignment="Center" Margin="10,15,12,5" HorizontalContentAlignment="Stretch"/>
+        <Label x:Name="lblAge" Content="" Grid.Column="4" Height="25" Margin="0,15,0,10" Grid.Row="2" VerticalAlignment="Center" RenderTransformOrigin="0.468,0" HorizontalAlignment="Right" Width="62"/>
+        <TextBox Controls:TextBoxHelper.Watermark="Age" x:Name="txtAge" Height="30" Margin="10,15,0,5" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Center" Grid.Column="4" HorizontalContentAlignment="Stretch" HorizontalAlignment="Left" Width="68" TabIndex="10" BorderBrush="{DynamicResource AccentColorBrush}"/>
+        <Grid Grid.ColumnSpan="5" Grid.RowSpan="7">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120*"/>
+                <ColumnDefinition Width="176*"/>
+                <ColumnDefinition Width="120*"/>
+                <ColumnDefinition Width="139*"/>
+                <ColumnDefinition Width="145*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50*"/>
+                <RowDefinition Height="50*"/>
+                <RowDefinition Height="50*"/>
+                <RowDefinition Height="50*"/>
+                <RowDefinition Height="50*"/>
+                <RowDefinition Height="50*"/>
+                <RowDefinition Height="50*"/>
+            </Grid.RowDefinitions>
+            <Label Content="_Remarks" Height="30" Margin="10,10,0,10" Grid.Row="4" VerticalAlignment="Center" Width="100" HorizontalContentAlignment="Stretch" HorizontalAlignment="Left" Grid.Column="2"/>
+            <TextBox Controls:TextBoxHelper.Watermark="T.I.T, Mulleys, etc" x:Name="txtRemarks" Margin="10" Grid.Row="4" TextWrapping="Wrap" Grid.Column="3" HorizontalContentAlignment="Stretch" TabIndex="14" BorderBrush="{DynamicResource AccentColorBrush}"/>
+            <Label x:Name="lblRecNo1" Content="" Grid.Column="4" Height="30" Grid.Row="4" VerticalAlignment="Center" Margin="10,15,12,5" HorizontalContentAlignment="Stretch"/>
+            <Button x:Name="btnSave" Height="50" Margin="29,0,41,0" Grid.Row="6" Width="50"  Background="{DynamicResource AccentColorBrush}" FontFamily="Segoe UI" FontSize="12" FontWeight="Normal" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" VerticalAlignment="Center" TabIndex="13" HorizontalAlignment="Center" Style="{DynamicResource MetroCircleButtonStyle}" ToolTip="Click here to save record">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="Icons_Light/appbar.save.png" Height="40" Width="40" />
+                </StackPanel>
+            </Button>
+            <Button x:Name="btnEdit"  Height="50" Margin="106,0,20,0" Grid.Row="6" Width="50"   Background="{DynamicResource AccentColorBrush}" FontFamily="Segoe UI" FontSize="12" FontWeight="Normal" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" VerticalAlignment="Center" TabIndex="15" HorizontalAlignment="Center" Style="{DynamicResource MetroCircleButtonStyle}" ToolTip="Click here to edit record">
+                <StackPanel VerticalAlignment="Center">
+                    <Image Source="Icons_Light/appbar.edit.png" Height="40" Width="40" VerticalAlignment="Bottom"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="btnCancel"  Height="50" Margin="10,0,116,0" Grid.Row="6" Width="50"  Background="{DynamicResource AccentColorBrush}" FontFamily="Segoe UI" FontSize="12" FontWeight="Normal" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" VerticalAlignment="Center" TabIndex="14" HorizontalAlignment="Center" Style="{DynamicResource MetroCircleButtonStyle}" ToolTip="Click here to cancel record">
+                <StackPanel Orientation="Horizontal" Height="40" Width="40">
+                    <Image Source="Icons_Light/appbar.undo.png" Height="40" Width="40"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="btnFind"  Height="50" Margin="10,0,60,0" Grid.Row="6" Width="50"  Background="{DynamicResource AccentColorBrush}" FontFamily="Segoe UI" FontSize="12" FontWeight="Normal" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" VerticalAlignment="Center" TabIndex="14" HorizontalAlignment="Center" Style="{DynamicResource MetroCircleButtonStyle}" ToolTip="Click here to search a record">
+                <StackPanel Orientation="Horizontal" Height="40" Width="40">
+                    <Image Source="Icons_Light/appbar.magnify.png" Height="40" Width="40"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="btnArchive"  Height="50" Margin="70,0,0,0" Grid.Row="6" Width="50"  Background="{DynamicResource AccentColorBrush}" FontFamily="Segoe UI" FontSize="12" FontWeight="Normal" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" VerticalAlignment="Center" TabIndex="14" HorizontalAlignment="Center" Style="{DynamicResource MetroCircleButtonStyle}" ToolTip="Click here to archive record">
+                <StackPanel Orientation="Horizontal" Height="40" Width="40">
+                    <Image Source="Icons_Light/appbar.archive.png" Height="40" Width="40"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="btnFirst"   Height="50" Margin="8,0,0,0" Grid.Row="6" VerticalAlignment="Center" Width="50" FontFamily="Segoe UI" FontSize="12" FontWeight="Normal" Grid.Column="3" BorderThickness="0" HorizontalContentAlignment="Stretch" HorizontalAlignment="Left" TabIndex="18"  Background="{DynamicResource AccentColorBrush}" Style="{DynamicResource MetroCircleButtonStyle}" ToolTip="Click here to go to the first record" >
+                <Image Source="appbar.navigate.first.png" Height="40" Width="40" Margin="10,0,-2,0" />
+            </Button>
+            <Button x:Name="btnPrevious"  Grid.Column="3" Height="50" Grid.Row="6" VerticalAlignment="Center" Width="50" FontFamily="Segoe UI" FontSize="12" FontWeight="Normal" BorderThickness="0" HorizontalContentAlignment="Stretch" HorizontalAlignment="Right" TabIndex="18"  Background="{DynamicResource AccentColorBrush}" Style="{DynamicResource MetroCircleButtonStyle}" ToolTip="Click here to go to previous record" Margin="0,0,1,0" >
+                <Image Source="appbar.navigate.previous.png" />
+            </Button>
+            <Button x:Name="btnNext" Grid.Column="4" Height="50" Margin="9,0,0,0" Grid.Row="6" VerticalAlignment="Center" FontFamily="Segoe UI" FontSize="12" FontWeight="Normal" BorderThickness="0" HorizontalContentAlignment="Stretch" HorizontalAlignment="Left" Width="50" TabIndex="19"  Background="{DynamicResource AccentColorBrush}" Style="{DynamicResource MetroCircleButtonStyle}" ToolTip="Click here to go to next record" >
+                <Image Source="appbar.navigate.next.png" />
+            </Button>
+            <Button x:Name="btnLast"  Grid.Column="4" Height="50" Margin="0,0,10,0" Grid.Row="6" VerticalAlignment="Center" Width="50" FontFamily="Segoe UI" FontSize="12" FontWeight="Normal" BorderThickness="0" HorizontalContentAlignment="Stretch" HorizontalAlignment="Right" TabIndex="20"  Background="{DynamicResource AccentColorBrush}" Style="{DynamicResource MetroCircleButtonStyle}" ToolTip="Click here to go to the last record" >
+                <Image Source="appbar.navigate.last.png" Margin="-8,0,8,0" />
+            </Button>
+
+            <StackPanel x:Name="stpDetails" Margin="10,10,5,5" Grid.Row="1" Grid.RowSpan="4">
+                <Grid Height="181">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="26*"/>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions>
+                    <ListBox x:Name="lstDetails" Margin="0,3,0,0" Grid.Row="1" BorderBrush="{DynamicResource AccentColorBrush}" BorderThickness="1" UseLayoutRounding="False"/>
+                    <Grid x:Name="grdLabel" Height="30" Width="auto" Background="{DynamicResource AccentColorBrush}">
+                        <Label x:Name="lblHeader" Content="" HorizontalAlignment="Left" Margin="0,2,0,0" Width="95" Background="{DynamicResource AccentColorBrush}"/>
+                        <Button x:Name="btnClose" Height="30" Width="30" Style="{DynamicResource MetroCircleButtonStyle}"  Background="{DynamicResource AccentColorBrush}" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,2,0,4">
+                            <StackPanel Orientation="Horizontal" Height="20" Width="20">
+                                <Image Source="appbar.close.png" Height="20" Width="20" />
+                            </StackPanel>
+
+                        </Button>
+                    </Grid>
+                    <TextBox x:Name="txtTests" Grid.Row="3" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" BorderBrush="{DynamicResource AccentColorBrush}"></TextBox>
+                </Grid>
+            </StackPanel>
+            <Label x:Name="lblCost" Content="" Grid.Column="4" HorizontalAlignment="Left" Height="30" Margin="21,10,0,0" Grid.Row="5" VerticalAlignment="Top" Width="112"/>
+            <Label x:Name="lblService" Content="Service Cost" Grid.Column="3" HorizontalAlignment="Left" Height="30" Margin="5,10,0,0" Grid.Row="5" VerticalAlignment="Top" Width="76"/>
+            <ComboBox x:Name="cboSentTo" Grid.Column="1" Margin="10" Grid.Row="5" BorderBrush="{DynamicResource AccentColorBrush}" IsEditable="True"/>
+            <Label Content="_Sent to" Height="25" Margin="10" Grid.Row="5"/>
+            <ComboBox x:Name="cboNew" Margin="10" BorderBrush="{DynamicResource AccentColorBrush}" IsEditable="True"/>
+
+        </Grid>
+
+
+    </Grid>
+</Page>

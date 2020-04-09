@@ -1,0 +1,51 @@
+﻿<Page x:Class="pgClinicReport"
+      xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+      xmlns:Behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="700"
+      Title="pgClinicReport">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="140*"/>
+            <ColumnDefinition Width="140*"/>
+            <ColumnDefinition Width="140*"/>
+            <ColumnDefinition Width="140*"/>
+            <ColumnDefinition Width="140*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Diagnosis" Height="30" Margin="10" Width="102" FontSize="14" />
+        <Label Content="Date" Grid.Column="1" Height="30" Margin="10" Width="98" FontSize="14" />
+        <RadioButton x:Name="optCDate" Content="Current Date" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="107" FontSize="14" BorderBrush="{DynamicResource AccentColorBrush}" GroupName="SelectDate"/>
+        <DatePicker x:Name="dtpEnd" Grid.Column="4" Margin="10" Grid.Row="1" BorderBrush="{DynamicResource AccentColorBrush}" FontSize="14" />
+        <DatePicker x:Name="dtpStart" Grid.Column="3" Margin="10" Grid.Row="1" BorderBrush="{DynamicResource AccentColorBrush}" FontSize="14" />
+        <Label Content="Start Date" Grid.Column="3" Height="30" Margin="10" Width="101" FontSize="14"/>
+        <Label Content="End Date" Grid.Column="4" Height="30" Margin="10" Width="120" FontSize="14" />
+        <ComboBox x:Name="cboDiagnosis" Margin="10" Grid.Row="1" IsEditable="True" BorderBrush="{DynamicResource AccentColorBrush}" FontSize="14" />
+        <RadioButton x:Name="optODate" Content="Other Date(s)" Grid.Column="2" HorizontalAlignment="Left" Height="40" Margin="10,5,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120" FontSize="14" BorderBrush="{DynamicResource AccentColorBrush}" GroupName="SelectDate"/>
+        <Button x:Name="btnPrint" Height="50" Margin="53,0,37,0" Grid.Row="3" Width="50"  Background="{DynamicResource AccentColorBrush}" FontFamily="Segoe UI" FontSize="12" FontWeight="Normal" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" VerticalAlignment="Center" TabIndex="13" HorizontalAlignment="Center" Style="{DynamicResource MetroCircleButtonStyle}" ToolTip="Click here to print" Grid.Column="4">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="Icons_Light/appbar.printer.text.png" Height="40" Width="40" />
+            </StackPanel>
+        </Button>
+        <ComboBox x:Name="cboLarge" Margin="10" Grid.Row="2" IsEditable="True" Grid.Column="4" BorderBrush="{DynamicResource AccentColorBrush}" FontSize="14" />
+        <ComboBox x:Name="cboSmall" Margin="10" Grid.Row="2" IsEditable="True" Grid.Column="2" BorderBrush="{DynamicResource AccentColorBrush}" FontSize="14" />
+        <Label Content="Lower Years" Height="30" Margin="10" Width="120" Grid.Row="2" FontSize="14" Grid.Column="1"/>
+        <Label Content="Upper Years" Height="30" Margin="10" Width="120" Grid.Row="2" Grid.Column="3" FontSize="14" />
+        <RadioButton x:Name="optYears" Content="Years' range" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="120" FontSize="14"  BorderBrush="{DynamicResource AccentColorBrush}" GroupName="SelectRange"/>
+
+    </Grid>
+</Page>
+

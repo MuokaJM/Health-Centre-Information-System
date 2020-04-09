@@ -1,0 +1,362 @@
+﻿<Controls:MetroWindow x:Name="MainWindow" x:Class="MainWindow"
+     xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+    xmlns:Behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="MainWindow" Height="700" Width="900" WindowStartupLocation="CenterScreen" Icon="Alpha1.ico" GlowBrush="{DynamicResource AccentColorBrush}" WindowState="Maximized">
+
+    <Controls:MetroWindow.Flyouts>
+        <Controls:FlyoutsControl>
+
+            <Controls:Flyout Header="Settings" x:Name="fo" Position="Right" Width="200">
+                <!-- Your custom content here -->
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50*"/>
+                        <RowDefinition Height="50*"/>
+                        <RowDefinition Height="50*"/>
+                        <RowDefinition Height="400*"/>
+                        <RowDefinition Height="50*"/>
+                        
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100*"/>
+                        <ColumnDefinition Width="100*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Theme" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="30" Foreground="{DynamicResource AccentColorBrush}">
+                    </Label>
+                    <Label Content="Colour (Accent)" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="30"  Grid.Column="1" Foreground="{DynamicResource AccentColorBrush}">
+                    </Label>
+
+                    <RadioButton x:Name="optDark" Content="Dark" HorizontalAlignment="Left" Height="28" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="76"/>
+                    <RadioButton x:Name="optLight" Content="Light" HorizontalAlignment="Left" Height="28" Margin="10,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="76"/>
+                   
+                    <Label Content="Notification" HorizontalAlignment="Center" VerticalAlignment="Top" Width="90" Height="30"  Grid.Row="3" Foreground="{DynamicResource AccentColorBrush}"></Label>
+                    <Controls:ToggleSwitch x:Name="tglSwtNot" Grid.Row="3" Margin="0,30,0,0"  VerticalAlignment="Top" Height="50" Width="90">
+                    </Controls:ToggleSwitch>
+                    <Label Content="Remind me in" HorizontalAlignment="Center" Margin="0,60,0,0"  Width="90" Grid.Row="3" Foreground="{DynamicResource AccentColorBrush}" > </Label>
+                    <TextBox x:Name="txtTime" HorizontalAlignment="Center" Width="50" Margin="0,90,0,0" Grid.Row="3" Height="30" VerticalAlignment="Top" BorderBrush="{DynamicResource AccentColorBrush}"></TextBox>
+                    <Label Content="minutes" HorizontalAlignment="Center" Margin="0,120,0,0" Grid.Row="3" Foreground="{DynamicResource AccentColorBrush}"></Label>
+                    <Label Content="Play Sound" HorizontalAlignment="Center" Margin="0,150,0,0" Grid.Row="3" Foreground="{DynamicResource AccentColorBrush}"></Label>
+                   <Controls:ToggleSwitch x:Name="tglSwtSound"  Grid.Row="3" Margin="0,180,0,0" Checked="tglSwtSound_Click"   VerticalAlignment="Top" Height="50" Width="60">
+                    </Controls:ToggleSwitch>
+                    
+                    <Controls:NumericUpDown Minimum = "0" Maximum = "10000" Interval = "5" />
+                    <DockPanel Grid.Column="1" HorizontalAlignment="Left" Height="500" LastChildFill="True" Grid.Row="1" VerticalAlignment="Top" Width="100" Grid.RowSpan="3">
+
+                        <ListBox x:Name="lstTheme" Width="96" HorizontalAlignment="Right" Grid.Column="1" Grid.Row="2" >
+                            <ListBoxItem Selected="Lime_Click">
+                                <Button x:Name="lime" Content="" HorizontalAlignment="Left" Height="30" Width="30" Margin="5,5,5,5" VerticalAlignment="Top"   Style="{DynamicResource MetroCircleButtonStyle}" ToolTip="Lime" />
+                            </ListBoxItem>
+                            <ListBoxItem Selected="Green_Click">
+                                <Button x:Name="green" Content="" HorizontalAlignment="Left" Height="30" Width="30" Margin="5,5,5,5" VerticalAlignment="Top"   Style="{DynamicResource MetroCircleButtonStyle}" ToolTip="Green" />
+                            </ListBoxItem>
+                            <ListBoxItem Selected="Emerald_Click">
+                                <Button x:Name="emerald" Content="" HorizontalAlignment="Left" Height="30" Width="30" Margin="5,5,5,5" VerticalAlignment="Top"   Style="{DynamicResource MetroCircleButtonStyle}" ToolTip="Emerald" />
+                            </ListBoxItem>
+                            <ListBoxItem Selected="Teal_Click" >
+                                <Button x:Name="teal" Content="" HorizontalAlignment="Left" Height="30" Width="30" Margin="5,5,5,5" VerticalAlignment="Top"   Style="{DynamicResource MetroCircleButtonStyle}" ToolTip="Teal" />
+                            </ListBoxItem>
+                            <ListBoxItem Selected="Cyan_Click">
+                                <Button x:Name="cyan" Content="" HorizontalAlignment="Left" Height="30" Width="30" Margin="5,5,5,5" VerticalAlignment="Top"   Style="{DynamicResource MetroCircleButtonStyle}" ToolTip="Cyan" />
+                            </ListBoxItem>
+                            <ListBoxItem Selected="Cobalt_Click" >
+                                <Button x:Name="cobalt" Content="" HorizontalAlignment="Left" Height="30" Width="30" Margin="5,5,5,5" VerticalAlignment="Top"   Style="{DynamicResource MetroCircleButtonStyle}" ToolTip="Cobalt" />
+                            </ListBoxItem>
+                            <ListBoxItem Selected="Indigo_Click">
+                                <Button x:Name="indigo" Content="" HorizontalAlignment="Left" Height="30" Width="30" Margin="5,5,5,5" VerticalAlignment="Top"   Style="{DynamicResource MetroCircleButtonStyle}" ToolTip="Indigo" />
+                            </ListBoxItem>
+                            <ListBoxItem Selected="Violet_Click">
+                                <Button x:Name="violet" Content="" HorizontalAlignment="Left" Height="30" Width="30" Margin="5,5,5,5" VerticalAlignment="Top"   Style="{DynamicResource MetroCircleButtonStyle}" ToolTip="Violet" />
+                            </ListBoxItem>
+                            <ListBoxItem Selected="Pink_Click">
+                                <Button x:Name="pink" Content="" HorizontalAlignment="Left" Height="30" Width="30" Margin="5,5,5,5" VerticalAlignment="Top"   Style="{DynamicResource MetroCircleButtonStyle}" ToolTip="Pink" />
+                            </ListBoxItem>
+                            <ListBoxItem Selected="Magenta_Click">
+                                <Button x:Name="magenta" Content="" HorizontalAlignment="Left" Height="30" Width="30" Margin="5,5,5,5" VerticalAlignment="Top"   Style="{DynamicResource MetroCircleButtonStyle}" ToolTip="Magenta" />
+                            </ListBoxItem>
+                            <ListBoxItem Selected="Crimson_Click">
+                                <Button x:Name="crimson" Content="" HorizontalAlignment="Left" Height="30" Width="30" Margin="5,5,5,5" VerticalAlignment="Top"   Style="{DynamicResource MetroCircleButtonStyle}" ToolTip="Crimson" />
+                            </ListBoxItem>
+                            <ListBoxItem Selected="Red_Click">
+                                <Button x:Name="red" Content="" HorizontalAlignment="Left" Height="30" Width="30" Margin="5,5,5,5" VerticalAlignment="Top"   Style="{DynamicResource MetroCircleButtonStyle}" ToolTip="Red" />
+                            </ListBoxItem>
+                            <ListBoxItem Selected="Orange_Click">
+                                <Button x:Name="orange" Content="" HorizontalAlignment="Left" Height="30" Width="30" Margin="5,5,5,5" VerticalAlignment="Top"   Style="{DynamicResource MetroCircleButtonStyle}" ToolTip="Orange" />
+                            </ListBoxItem>
+                            <ListBoxItem Selected="Amber_Click">
+                                <Button x:Name="amber" Content="" HorizontalAlignment="Left" Height="30" Width="30" Margin="5,5,5,5" VerticalAlignment="Top"   Style="{DynamicResource MetroCircleButtonStyle}" ToolTip="Amber" />
+                            </ListBoxItem>
+                            <ListBoxItem Selected="Yellow_Click">
+                                <Button x:Name="yellow" Content="" HorizontalAlignment="Left" Height="30" Width="30" Margin="5,5,5,5" VerticalAlignment="Top"   Style="{DynamicResource MetroCircleButtonStyle}" ToolTip="Yellow" />
+                            </ListBoxItem>
+                            <ListBoxItem Selected="Brown_Click" >
+                                <Button x:Name="brown" Content="" HorizontalAlignment="Left" Height="30" Width="30" Margin="5,5,5,5" VerticalAlignment="Top"   Style="{DynamicResource MetroCircleButtonStyle}" ToolTip="Brown" />
+                            </ListBoxItem>
+                            <ListBoxItem Selected="Olive_Click">
+                                <Button x:Name="olive" Content="" HorizontalAlignment="Left" Height="30" Width="30" Margin="5,5,5,5" VerticalAlignment="Top"   Style="{DynamicResource MetroCircleButtonStyle}" ToolTip="Olive" />
+                            </ListBoxItem>
+                            <ListBoxItem Selected="Steel_Click" >
+                                <Button x:Name="steel" Content="" HorizontalAlignment="Left" Height="30" Width="30" Margin="5,5,5,5" VerticalAlignment="Top"   Style="{DynamicResource MetroCircleButtonStyle}" ToolTip="Steel" />
+                            </ListBoxItem>
+                            <ListBoxItem Selected="Mauve_Click">
+                                <Button x:Name="mauve" Content="" HorizontalAlignment="Left" Height="30" Width="30" Margin="5,5,5,5" VerticalAlignment="Top"   Style="{DynamicResource MetroCircleButtonStyle}" ToolTip="Mauve" />
+                            </ListBoxItem>
+                            <ListBoxItem Selected="Taupe_Click">
+                                <Button x:Name="taupe" Content="" HorizontalAlignment="Left" Height="30" Width="30" Margin="5,5,5,5" VerticalAlignment="Top"   Style="{DynamicResource MetroCircleButtonStyle}" ToolTip="Taupe" />
+                            </ListBoxItem>
+                        </ListBox>
+
+                    </DockPanel>
+
+                    <Button x:Name="btnOK" Content="OK" Background="{DynamicResource AccentColorBrush}" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" Grid.Row="4" VerticalAlignment="Top" Width="76" IsDefault="True"  FontFamily="Segoe UI" FontSize="12" FontWeight="Normal"/>
+                    <Button x:Name="btnCancel" Content="CANCEL" Background="{DynamicResource AccentColorBrush}" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" Grid.Row="4" VerticalAlignment="Top" Width="76" IsCancel="True"  FontFamily="Segoe UI" FontSize="12" FontWeight="Normal"/>
+
+
+                </Grid>
+
+            </Controls:Flyout>
+            
+            <Controls:Flyout Header="Department" x:Name="DeptFo" Position="Bottom" >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50*"/>
+                        <RowDefinition Height="50*"/>
+                        <RowDefinition Height="50*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100*"/>
+                        <ColumnDefinition Width="100*"/>
+                         <ColumnDefinition Width="100*"/>
+                        <ColumnDefinition Width="100*"/>
+                         <ColumnDefinition Width="100*"/>
+                        <ColumnDefinition Width="100*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <RadioButton x:Name="optConsultation" Content="Consultation" Grid.Column="0" Grid.Row="1" ></RadioButton>
+                    <RadioButton x:Name="optLab" Content="Lab" Grid.Column="1" Grid.Row="1" ></RadioButton>
+                    <RadioButton x:Name="optPharm" Content="Pharmacy" Grid.Column="2" Grid.Row="1" ></RadioButton>
+                    <RadioButton x:Name="optRecep" Content="Reception" Grid.Column="3" Grid.Row="1" ></RadioButton>
+
+                    <Button x:Name="btnChange" Content="_OK" Grid.Column="4" Grid.Row="1" Background="{DynamicResource AccentColorBrush}" Width="76" IsDefault="True"  FontFamily="Segoe UI" FontSize="12" FontWeight="Normal" ></Button>
+                    <Button x:Name="btnNoChange" Content="_Cancel" Grid.Column="5" Grid.Row="1" Background="{DynamicResource AccentColorBrush}" Width="76" IsCancel="True"  FontFamily="Segoe UI" FontSize="12" FontWeight="Normal"></Button>
+                </Grid>
+            </Controls:Flyout>
+
+        </Controls:FlyoutsControl>
+        
+        
+        
+    </Controls:MetroWindow.Flyouts>
+    
+    
+    
+    <Controls:MetroWindow.RightWindowCommands>
+        <Controls:WindowCommands>
+            <Button x:Name="btnSetting" Content="settings" Click="ChangeTheme" />
+        </Controls:WindowCommands>
+    </Controls:MetroWindow.RightWindowCommands>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="637*"/>
+            <ColumnDefinition Width="55"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition x:Name="b" Height="484*"/>
+            <RowDefinition Height="30*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="btnPrevious"  HorizontalAlignment="Left" Margin="0,0,0,1" VerticalAlignment="Center" Width="50" Height="50" Style="{DynamicResource MetroCircleButtonStyle}"  Background="{DynamicResource AccentColorBrush}">
+            <StackPanel Orientation="Horizontal" Height="auto">
+                <Image Source="appbar.arrow.left.png" Height="40" Width="40" />
+            </StackPanel>
+        </Button>
+        <Button x:Name="btnNext" HorizontalAlignment="Left" Margin="0,0,0,1" VerticalAlignment="Center"  Width="50" Height="50" Style="{DynamicResource MetroCircleButtonStyle}"  Background="{DynamicResource AccentColorBrush}" Grid.Column="1">
+            <StackPanel Orientation="Horizontal" Height="auto">
+                <Image x:Name="imgNxt" Source="appbar.arrow.right.png" Height="40" Width="40" />
+            </StackPanel>
+
+        </Button>
+        <DockPanel Grid.ColumnSpan="4" HorizontalAlignment="Stretch" Height="auto" Margin="10,10,10,10" Grid.Row="1" VerticalAlignment="Stretch" Width="auto">
+            <TabControl  x:Name="tcMain" Height="auto" Margin="1,1,1,0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}" DockPanel.Dock="Bottom" IsManipulationEnabled="True"  />
+        </DockPanel>
+        <Button x:Name="btnCTab"  Grid.Column="3" Width="50" Height="50" Margin="5,0,0,0" Grid.RowSpan="2" VerticalAlignment="Top" BorderThickness="0" Style="{DynamicResource MetroCircleButtonStyle}"  Background="{DynamicResource AccentColorBrush}">
+            <StackPanel Orientation="Horizontal" Height="40" Width="40">
+                <Image Source="appbar.close.png" Height="40" Width="40" />
+            </StackPanel>
+
+        </Button>
+        <Menu x:Name="mnuMain" Grid.Column="2" Height="34" Margin="10,10,0,4" Width="617" HorizontalAlignment="Left" FontSize="18">
+            <MenuItem Header="_MAIN" x:Name="Main" FontSize="18">
+
+                <MenuItem Header="_Patient" x:Name="Patient" Click="OpenPatientFile">
+                   <!-- <MenuItem.Icon>
+                        <Image Source="Icons_Light/Pat.png" Height="40" Width="40"/>
+                    </MenuItem.Icon>-->
+                </MenuItem>
+
+
+                <MenuItem Header="_Lab Tests" x:Name="LabTests" Click="OpenLabTestsFile"/>
+                <MenuItem Header="_Impressions" x:Name="Impressions" Click="OpenImpressionFile"></MenuItem>
+                <MenuItem Header="_Drugs" x:Name="Drugs" >
+                    <MenuItem Header="_Drugs" x:Name="DDetail" Click="OpenDrugsFile"/>
+                    <MenuItem Header="Drugs _Received" x:Name="DReceived" Click="openDrugsReceivedfile"/>
+                    </MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="_Switch Department" x:Name="SwitchDept" Click="switchDepartment"/>
+                <Separator></Separator>
+                <MenuItem Header="_Switch User" x:Name="SwitchUser" Click="switchUserM" ></MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="E_xit" x:Name="Exit" Click="exitSystem"></MenuItem>
+            </MenuItem>
+            
+            <MenuItem Header="_TREATMENT" x:Name="Treatment">
+                <MenuItem Header="_Consultation" x:Name="Consultation" Click="OpenConsultationFile">
+
+                </MenuItem>
+                <MenuItem Header="_Pharmacy" x:Name="Pharmacy" Click="OpenPharmacyFile">
+                    
+                </MenuItem>
+                
+                <MenuItem Header="_Lab" x:Name="Lab" Click="OpenLabFile">
+                    
+                </MenuItem>
+
+                <MenuItem Header="_Nurse" x:Name="Nurse" Click="OpenNurseFile">
+
+                </MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="_Clinics" x:Name="Clinics">
+                    <MenuItem Header="_Ante-Natal Care" x:Name="ANC" Click="OpenANCFile"></MenuItem>
+                    <MenuItem Header="_Child Welfare Clinic" x:Name="CWC" Click="OpenCWCFile"></MenuItem>
+                    <MenuItem Header="_Family Planning" x:Name="FPC" Click="OpenFPCFile"></MenuItem>
+                    <Separator></Separator>
+                    <MenuItem Header="ANC _History" x:Name="ANCHistory" Click="OpenANCHistoryFile"></MenuItem>
+                    <MenuItem Header="_Pregnancy History" x:Name="PregnancyHistory" Click="OpenPreviousPregnancyFile"></MenuItem>
+                </MenuItem>
+            </MenuItem>
+            
+            <MenuItem Header="_ACCOUNTS" x:Name="Accounts">
+
+                <MenuItem Header="_Payment" x:Name="Payment" Click="OpenPaymentFile">
+
+                </MenuItem>
+                
+                <MenuItem Header="_View Bill" x:Name="ViewBill" Click="OpenBillFile">
+                    
+                </MenuItem>
+                <MenuItem Header="_Bill" x:Name="Bill" Click="printBill">
+                    
+                </MenuItem>
+                
+                 <Separator></Separator>
+                <MenuItem Header="_Reports" x:Name="ACRpts">
+                    <MenuItem Header="Daily Collections _Summary" x:Name="DColsSum" Click="PrintDailyCollections"></MenuItem>
+                    <MenuItem Header="_Daily Collections Details" x:Name="DCols" Click="PrintDailyColSummary"></MenuItem>
+                </MenuItem>
+              
+               
+                
+            </MenuItem>
+            <MenuItem Header="_REPORTS" x:Name="Reports">
+                <MenuItem Header="_Reports" x:Name="patRep" Click="printPatients" IsEnabled="False">
+                    
+                </MenuItem>
+                
+                <MenuItem Header="Print R_eceipt" x:Name="PrintRcpt" Click="printReceipt">             
+                </MenuItem>
+
+                <MenuItem Header="Print _Lab Result" x:Name="PrntLabResult" Click="printLabResult"></MenuItem>
+                
+                <MenuItem Header="Print _Consultation" x:Name="prntConReport" Click="printConReport" ></MenuItem>
+                <MenuItem Header="Print _Drug List" x:Name="printDrug" Click="PrintDrugList"></MenuItem>
+                <MenuItem Header="Print _Test List" x:Name="printLabTest" Click="PrintLabTestList"></MenuItem>
+
+                <Separator></Separator>
+                <MenuItem Header="_Consultation" x:Name="ConsultationReports"> 
+                    <MenuItem Header="_Diagnosis" x:Name="printDiagnosis" Click="printMedReport" ></MenuItem>
+                </MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="_Pharmacy" x:Name="PharmacyReports">
+                    <MenuItem Header="_Dispensed Drugs" x:Name="printDispensing" Click="printPharmacyReport"> </MenuItem>
+                    
+                </MenuItem>
+                </MenuItem>
+            
+            <MenuItem Header="_TOOLS" x:Name="Tools">
+                <MenuItem Header="_Users" x:Name="User" Click="OpenUserFile">
+                    
+                </MenuItem>
+                
+                <MenuItem Header="_My Queue" x:Name="MyQueue" Click="OpenMyQueueFile"> 
+                     
+                </MenuItem>
+                <MenuItem x:Name="Reg" Header="_Registration" Click="RegDet" Visibility="Hidden" />
+
+            </MenuItem>
+        </Menu>
+        <StatusBar x:Name="sbMain" Height="35" Grid.Row="2" Width="auto" Grid.ColumnSpan="4" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Foreground="White">
+            <StatusBarItem>
+                <Label x:Name="lblUser" ToolTip="Name of the person currently using the system">
+                    
+                </Label>
+            </StatusBarItem>
+            <StatusBarItem>
+                <Label x:Name="lblUserStatus" ToolTip="User status">
+                    
+                </Label>
+            </StatusBarItem>
+            <Separator></Separator>
+
+            <StatusBarItem>
+
+                <Label x:Name="lblDate" ToolTip="Date you logged in"></Label>
+            </StatusBarItem>
+
+            <StatusBarItem>
+                <Label x:Name="lblTimeIn" ToolTip="The time you logged in">
+                    
+                </Label>
+               
+            </StatusBarItem>
+           
+            <StatusBarItem>
+                <Label x:Name="lblTime" ToolTip="The current time">
+                    
+                </Label>
+            </StatusBarItem>
+            <StatusBarItem>
+                <Label x:Name="lblTTimeIn" ToolTip="The total time spent while logged in">
+                    
+                </Label>
+            </StatusBarItem>
+            
+            <Separator>
+                
+            </Separator>
+            <StatusBarItem>
+               
+            </StatusBarItem>
+            
+            
+            <StatusBarItem>
+                
+            </StatusBarItem>
+
+            
+            
+           
+
+           
+            <StatusBarItem>
+
+            </StatusBarItem>
+
+        </StatusBar>
+
+    </Grid>
+</Controls:MetroWindow>

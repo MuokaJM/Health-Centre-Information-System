@@ -1,0 +1,68 @@
+﻿<Page x:Class="pgPayment"
+      xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+      xmlns:Behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="700"
+      Title="pgPayment">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="145*"/>
+            <ColumnDefinition Width="145*"/>
+            <ColumnDefinition Width="145*"/>
+            <ColumnDefinition Width="145*"/>
+            <ColumnDefinition Width="145*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+
+        <Label Content="DATE:" Height="30" Margin="10,9,20,11" Grid.Column="3" VerticalAlignment="Center"/>
+        <Label x:Name="lblToday" Content="" Grid.Column="4" Height="30" Margin="10,10,12,10" VerticalAlignment="Center"/>
+        <ComboBox x:Name="cboBNo" BorderBrush="{DynamicResource AccentColorBrush}" Margin="10" ToolTip="Select consultation number here" TabIndex="1"/>
+        <Label x:Name="lblDetails" Grid.ColumnSpan="2" Content="" Grid.Column="1" Height="30" Margin="15,15,5,5" VerticalAlignment="Center" Width="260"/>
+        <Label x:Name="lblPYNo" Content="" HorizontalAlignment="Left" Height="30" Margin="10,12,0,12" VerticalAlignment="Center" Width="29" BorderBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" BorderThickness="0" Grid.Column="2" Grid.Row="1"/>
+        <Label Content="PAYMENT NUMBER:" Height="30" Margin="10,10,5,10" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1"/>
+        <Label Content="BILL AMOUNT:" Height="30" Margin="10,10,10,14" VerticalAlignment="Center" Grid.Row="2"/>
+        <Label Content="_CASH GIVEN:" Height="30" Margin="10,10,10,14" VerticalAlignment="Center" Grid.Row="3"/>
+        <TextBox x:Name="txtCashGiven" BorderBrush="{DynamicResource AccentColorBrush}" Controls:TextBoxHelper.Watermark="Enter cash given here" Grid.Column="1" Margin="10" Grid.Row="3" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" TabIndex="5" />
+        <TextBox x:Name="txtRef" BorderBrush="{DynamicResource AccentColorBrush}" Controls:TextBoxHelper.Watermark="Enter reference number"   Grid.Column="1" Margin="10" Grid.Row="5" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" TabIndex="6" ToolTip="E.g. Cheque Number, Mpesa Code"/>
+        <Label Content="AMOUNT TO PAY:" Height="30" Margin="10,10,10,14" VerticalAlignment="Center" Grid.Row="2" Grid.Column="2"/>
+        <Label x:Name="lblBalance" Content="" Height="30" Margin="5,10,10,10" VerticalAlignment="Center" Grid.Row="2" Grid.Column="3"/>
+        <Label Content="PAYMENT MODE:" Height="30" Margin="10,12" VerticalAlignment="Center" Grid.Row="3" Grid.Column="2"/>
+        <RadioButton x:Name="optCash" Content="Cash" Height="30" Margin="10,14,0,10" Grid.Row="3" VerticalAlignment="Center" GroupName="Sex" Grid.Column="3" HorizontalAlignment="Left"/>
+        <RadioButton x:Name="optCheque" Content="Cheque" Height="30" Margin="10,10,0,15" Grid.Row="4" VerticalAlignment="Center" Width="92" GroupName="Sex" Grid.Column="3" RenderTransformOrigin="-0.783,0.467" HorizontalAlignment="Left"/>
+        <RadioButton x:Name="optMpesa" Content="Mpesa" Height="30" Margin="10,14,52,10" Grid.Row="3" VerticalAlignment="Center" Width="74" GroupName="Sex" Grid.Column="4" HorizontalAlignment="Left"/>
+        <RadioButton x:Name="optOther" Content="Other" Height="30" Margin="10,10,0,15" Grid.Row="4" VerticalAlignment="Center" Width="58" GroupName="Sex" RenderTransformOrigin="8.431,2.069" Grid.Column="4" HorizontalAlignment="Left"/>
+        <Label Content="REFERENCE NUMBER:" Height="30" Margin="10,10,0,14" VerticalAlignment="Center" Grid.Row="5"/>
+        <Label x:Name="lblBAmt" BorderBrush="{DynamicResource AccentColorBrush}" Content="" Height="30" Margin="4,10,10,14" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" FontSize="16" FontWeight="Bold"/>
+        <Label x:Name="lblPrePaid" Content="" Height="30" Margin="0,14,12,10" VerticalAlignment="Center" Grid.Row="1" Grid.Column="4" HorizontalAlignment="Right" Width="116" ToolTip="Prepaid Amount"/>
+        <Label Content="BALANCE:" Height="30" Margin="10,10,10,15" VerticalAlignment="Center" Grid.Row="4"/>
+        <Label x:Name="lblCustBal" Content="" Height="30" Margin="10,15,5,10" VerticalAlignment="Center" Grid.Row="4" Grid.Column="1" FontWeight="Bold" FontSize="18"/>
+        <Button x:Name="btnSave" Height="50" Margin="29,0,61,0" Grid.Row="6" Width="50"  Background="{DynamicResource AccentColorBrush}" FontFamily="Segoe UI" FontSize="12" FontWeight="Normal" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" VerticalAlignment="Center" TabIndex="13" HorizontalAlignment="Center" Style="{DynamicResource MetroCircleButtonStyle}" ToolTip="Click here to save record">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="Icons_Light/appbar.save.png" Height="40" Width="40" />
+            </StackPanel>
+        </Button>
+        <Button x:Name="btnCancel"  Height="50" Margin="45,0" Grid.Row="6" Width="50"  Background="{DynamicResource AccentColorBrush}" FontFamily="Segoe UI" FontSize="12" FontWeight="Normal" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" VerticalAlignment="Center" TabIndex="14" HorizontalAlignment="Center" Style="{DynamicResource MetroCircleButtonStyle}" ToolTip="Click here to cancel record" Grid.Column="1">
+            <StackPanel Orientation="Horizontal" Height="40" Width="40">
+                <Image Source="Icons_Light/appbar.undo.png" Height="40" Width="40"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="btnPrint" Height="50" Margin="45,0" Grid.Row="6" Width="50"  Background="{DynamicResource AccentColorBrush}" FontFamily="Segoe UI" FontSize="12" FontWeight="Normal" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch" VerticalAlignment="Center" TabIndex="13" HorizontalAlignment="Center" Style="{DynamicResource MetroCircleButtonStyle}" ToolTip="Click here to print" Grid.Column="2">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="Icons_Light/appbar.printer.text.png" Height="40" Width="40" />
+            </StackPanel>
+        </Button>
+    </Grid>
+</Page>

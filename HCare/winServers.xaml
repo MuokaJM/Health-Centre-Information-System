@@ -1,0 +1,29 @@
+﻿
+<Controls:MetroWindow x:Name="winServers" x:Class="winServers"
+   xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"                      
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    ShowTitleBar="False" ShowIconOnTitleBar="False" ShowCloseButton="False" ShowMaxRestoreButton="False" ShowMinButton="False"
+                 Title="Servers" Height="200" Width="500" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="44*"/>
+            <RowDefinition Height="74*"/>
+            <RowDefinition Height="74*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="185*"/>
+            <ColumnDefinition Width="307*"/>
+        </Grid.ColumnDefinitions>
+        <TreeView x:Name="tvServers" HorizontalAlignment="Left" Height="172" Margin="10,10,0,0" VerticalAlignment="Top" Width="165" Grid.RowSpan="3"/>
+        <CheckBox x:Name="chkAuthentication" Content="Use NT Authentication" Grid.Column="1" HorizontalAlignment="Left" Height="27" Margin="35,8,0,0" VerticalAlignment="Top" Width="262"/>
+        <Label Content="_User Name" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="121"/>
+        <Label Content="_Password" Grid.Column="1" HorizontalAlignment="Left" Height="29" Margin="10,45,0,0" Grid.Row="1" VerticalAlignment="Top" Width="121"/>
+        <TextBox x:Name="txtUName" Controls:TextboxHelper.Watermark="Enter user name here" Grid.Column="1" HorizontalAlignment="Left" Height="30" Margin="136,10,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="161"/>
+        <PasswordBox x:Name="txtPswd" Controls:TextboxHelper.Watermark="Enter password here" Grid.Column="1" HorizontalAlignment="Left" Height="19" Margin="136,45,0,0" Grid.Row="1" VerticalAlignment="Top" Width="161"/>
+        <Button x:Name="btnLogin" Content="_Login" HorizontalAlignment="Left" Height="30" Margin="10,27,0,0" Grid.Row="2" VerticalAlignment="Top" Width="110" RenderTransformOrigin="0.476,1.379" FontFamily="Segoe UI" FontSize="12" FontWeight="Normal" IsDefault="True" Grid.Column="1"/>
+        <Button x:Name="btnCancel" Content="_Cancel" Grid.Column="1" HorizontalAlignment="Center" Height="30" Margin="187,27,10,0" Grid.Row="2" Width="110" FontFamily="Segoe UI" FontSize="12" FontWeight="Normal" VerticalAlignment="Top" IsCancel="True"/>
+
+    </Grid>
+    
+</Controls:MetroWindow>

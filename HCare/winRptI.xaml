@@ -1,0 +1,15 @@
+﻿<Controls:MetroWindow
+    xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+    xmlns:Behaviours="clr-namespace:MahApps.Metro.Behaviours;assembly=MahApps.Metro"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Viewer="clr-namespace:SAPBusinessObjects.WPF.Viewer;assembly=SAPBusinessObjects.WPF.Viewer" x:Name="winRptI" x:Class="winRptI"
+    Title="Reports" Height="500" Width="700" WindowStartupLocation="CenterScreen" >
+
+    <Grid>
+        <DockPanel HorizontalAlignment="Left" Height="auto" LastChildFill="True" Margin="10,10,10,10" VerticalAlignment="Top" Width="auto"/>
+        <Viewer:CrystalReportsViewer x:Name="crvMain" Margin="10" Height="auto" Width="auto" />
+
+    </Grid>
+</Controls:MetroWindow>

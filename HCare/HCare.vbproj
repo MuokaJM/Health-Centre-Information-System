@@ -1,0 +1,1563 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FCE9EFD5-305D-44F8-969A-4308FD4349B4}</ProjectGuid>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HCare</RootNamespace>
+    <AssemblyName>HCare</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <PublishUrl>C:\Setup\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>Alpha Health Care</ProductName>
+    <PublisherName>Alpha Computers</PublisherName>
+    <SuiteName>Alpha Health Care</SuiteName>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>77</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+    <BootstrapperComponentsUrl>C:\Users\masii8\Desktop\Muoka\Tumaini\HCare\HCare\Resources</BootstrapperComponentsUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <IncrementalBuild>true</IncrementalBuild>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>HCare.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>false</DebugSymbols>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <IncrementalBuild>false</IncrementalBuild>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>HCare.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>HCare.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>HCare.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>073697ED7240FD0DA414EFE8B28E181412745D12</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>HCare_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>Custom</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Alpha.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="adodb, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="MahApps.Metro, Version=1.2.3.0, Culture=neutral, PublicKeyToken=f4fb5a3c4d1e5b4f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MahApps.Metro.1.2.3.0\lib\net45\MahApps.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft SQL Server\120\SDK\Assemblies\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.ConnectionInfoExtended, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft SQL Server\120\SDK\Assemblies\Microsoft.SqlServer.ConnectionInfoExtended.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Dmf.Adapters, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft SQL Server\120\SDK\Assemblies\Microsoft.SqlServer.Dmf.Adapters.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.DmfSqlClrWrapper, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft SQL Server\120\SDK\Assemblies\Microsoft.SqlServer.DmfSqlClrWrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Dts.Design, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft SQL Server\120\SDK\Assemblies\Microsoft.SqlServer.Dts.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SQLServer.DTSRuntimeWrap, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft SQL Server\120\SDK\Assemblies\Microsoft.SQLServer.DTSRuntimeWrap.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Rmo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft SQL Server\120\SDK\Assemblies\Microsoft.SqlServer.Rmo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft SQL Server\120\SDK\Assemblies\Microsoft.SqlServer.Smo.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SQLTaskConnectionsWrap, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft SQL Server\120\SDK\Assemblies\Microsoft.SqlServer.SQLTaskConnectionsWrap.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.SqlWmiManagement, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft SQL Server\120\SDK\Assemblies\Microsoft.SqlServer.SqlWmiManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="ReachFramework">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="sapbusinessobjects.wpf.viewer, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="SAPBusinessObjects.WPF.ViewerShared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SqlXml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Printing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.1.2.3.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="Application.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="DispensedDrugsSummary.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DispensedDrugsSummary.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Login.xaml.vb">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pgANC.xaml.vb">
+      <DependentUpon>pgANC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pgANCPatientDetails.xaml.vb">
+      <DependentUpon>pgANCPatientDetails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pgBill.xaml.vb">
+      <DependentUpon>pgBill.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pgConsultation.xaml.vb">
+      <DependentUpon>pgConsultation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pgCWC.xaml.vb">
+      <DependentUpon>pgCWC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pgDrugs.xaml.vb">
+      <DependentUpon>pgDrugs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pgDrugsReceived.xaml.vb">
+      <DependentUpon>pgDrugsReceived.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pgFP.xaml.vb">
+      <DependentUpon>pgFP.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pgImpression.xaml.vb">
+      <DependentUpon>pgImpression.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pgLab.xaml.vb">
+      <DependentUpon>pgLab.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pgLabTests.xaml.vb">
+      <DependentUpon>pgLabTests.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pgMedReports.xaml.vb">
+      <DependentUpon>pgMedReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pgMyQueue.xaml.vb">
+      <DependentUpon>pgMyQueue.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pgNurse.xaml.vb">
+      <DependentUpon>pgNurse.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pgPatient.xaml.vb">
+      <DependentUpon>pgPatient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pgPatSearch.xaml.vb">
+      <DependentUpon>pgPatSearch.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pgPayment.xaml.vb">
+      <DependentUpon>pgPayment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pgPharmacy.xaml.vb">
+      <DependentUpon>pgPharmacy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pgPharmacy2.xaml.vb">
+      <DependentUpon>pgPharmacy2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pgPharmacyReports.xaml.vb">
+      <DependentUpon>pgPharmacyReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pgPreviousPregnancy.xaml.vb">
+      <DependentUpon>pgPreviousPregnancy.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pgReports.xaml.vb">
+      <DependentUpon>pgReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pgUser.xaml.vb">
+      <DependentUpon>pgUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pgViewBill.xaml.vb">
+      <DependentUpon>pgViewBill.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="rptANC.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptANC.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptBilli.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptBilli.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptConsolt1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptConsolt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptDCollsDetails.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDCollsDetails.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptDispensedDrugs.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDispensedDrugs.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptDrugList.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDrugList.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptLabDetails1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptLabDetails.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptLabTestList.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptLabTestList.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptMedReport.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptMedReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptPatPresLabel.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPatPresLabel.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptPharmDetails1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPharmDetails.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptPharmDisp.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPharmDisp.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptPharmRequest.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPharmRequest.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptBill.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptBill.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptBill1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptBill1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptConsultation.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptConsultation.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptConsultationP.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptConsultationP.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptDailyCollections.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDailyCollections.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptLabRequest.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptLabRequest.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptLabResults.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptLabResults.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptPatients.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPatients.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptRcptDetails.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptRcptDetails.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptRcptNew.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptRcptNew.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptRcptSlip.vb">
+      <DependentUpon>rptRcptSlip.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="rptRcptSlip_1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptRcptSlip_1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptReceipt.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptReceipt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptSumColls.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSumColls.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Splash.xaml.vb">
+      <DependentUpon>Splash.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="winBill.xaml.vb">
+      <DependentUpon>winBill.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="winConReport.xaml.vb">
+      <DependentUpon>winConReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window1.xaml.vb">
+      <DependentUpon>Window1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="winLabResult.xaml.vb">
+      <DependentUpon>winLabResult.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="winPrintRcpt.xaml.vb">
+      <DependentUpon>winPrintRcpt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="winPswd.xaml.vb">
+      <DependentUpon>winPswd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="winReg.xaml.vb">
+      <DependentUpon>winReg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="winRpt.xaml.vb">
+      <DependentUpon>winRpt.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="winRptI.xaml.vb">
+      <DependentUpon>winRptI.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="winServer.xaml.vb">
+      <DependentUpon>winServer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="winSettings.xaml.vb">
+      <DependentUpon>winSettings.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="Application.xaml.vb">
+      <DependentUpon>Application.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.vb">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="pgANC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="pgANCPatientDetails.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="pgBill.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pgConsultation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pgCWC.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="pgDrugs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pgDrugsReceived.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pgFP.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="pgImpression.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pgLab.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pgLabTests.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pgMedReports.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="pgMyQueue.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pgNurse.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pgPatient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pgPatSearch.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pgPayment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pgPharmacy.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pgPharmacy2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="pgPharmacyReports.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="pgPreviousPregnancy.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="pgReports.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="pgUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pgViewBill.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Splash.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="winBill.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="winConReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="winLabResult.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="winPrintRcpt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="winPswd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="winReg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="winRpt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="winRptI.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="winServer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="winSettings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="System.Threading.Tasks" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows" />
+    <Import Include="System.Windows.Controls" />
+    <Import Include="System.Windows.Data" />
+    <Import Include="System.Windows.Documents" />
+    <Import Include="System.Windows.Input" />
+    <Import Include="System.Windows.Shapes" />
+    <Import Include="System.Windows.Media" />
+    <Import Include="System.Windows.Media.Imaging" />
+    <Import Include="System.Windows.Navigation" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="My Project\AssemblyInfo.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWpfExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.WPF.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="DispensedDrugsSummary.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DispensedDrugsSummary.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptANC.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptANC.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptBilli.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptBilli.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptConsolt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptConsolt1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDCollsDetails.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDCollsDetails.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDispensedDrugs.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDispensedDrugs.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDrugList.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDrugList.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptLabDetails.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptLabDetails1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptLabTestList.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptLabTestList.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptMedReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMedReport.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptPatPresLabel.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPatPresLabel.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptPharmDetails.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPharmDetails1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptPharmDisp.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPharmDisp.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptPharmRequest.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPharmRequest.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptBill.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptBill.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptBill1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptBill1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptConsultation.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptConsultation.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptConsultationP.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptConsultationP.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptDailyCollections.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDailyCollections.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptLabRequest.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptLabRequest.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptLabResults.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptLabResults.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptPatients.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPatients.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptRcptDetails.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptRcptDetails.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptRcptNew.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptRcptNew.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptRcptSlip.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptRcptSlip.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptRcptSlip_1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptRcptSlip_1.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptReceipt.rdlc" />
+    <EmbeddedResource Include="rptReceipt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptReceipt.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptSumColls.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSumColls.vb</LastGenOutput>
+    </EmbeddedResource>
+    <Resource Include="Font\catanbon.TTF" />
+    <Resource Include="Font\cataneon.TTF" />
+    <Resource Include="Font\catanltn.TTF" />
+    <None Include="HCare_4_TemporaryKey.pfx" />
+    <None Include="HCare_TemporaryKey.pfx" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\DataSources\ADODB.ADOCommandConstruction.datasource" />
+    <None Include="My Project\DataSources\ADODB.ADOConnectionConstruction.datasource" />
+    <None Include="My Project\DataSources\ADODB.ADOConnectionConstruction15.datasource" />
+    <None Include="My Project\DataSources\ADODB.ADORecordConstruction.datasource" />
+    <None Include="My Project\DataSources\ADODB.ADORecordsetConstruction.datasource" />
+    <None Include="My Project\DataSources\ADODB.ADOStreamConstruction.datasource" />
+    <None Include="My Project\DataSources\ADODB.Command.datasource" />
+    <None Include="My Project\DataSources\ADODB.Command15.datasource" />
+    <None Include="My Project\DataSources\ADODB.Command25.datasource" />
+    <None Include="My Project\DataSources\ADODB.CommandClass.datasource" />
+    <None Include="My Project\DataSources\ADODB.Connection.datasource" />
+    <None Include="My Project\DataSources\ADODB.Connection15.datasource" />
+    <None Include="My Project\DataSources\ADODB.ConnectionClass.datasource" />
+    <None Include="My Project\DataSources\ADODB.ConnectionEvents.datasource" />
+    <None Include="My Project\DataSources\ADODB.ConnectionEventsVt.datasource" />
+    <None Include="My Project\DataSources\ADODB.ConnectionEvents_BeginTransCompleteEventHandler.datasource" />
+    <None Include="My Project\DataSources\ADODB.ConnectionEvents_CommitTransCompleteEventHandler.datasource" />
+    <None Include="My Project\DataSources\ADODB.ConnectionEvents_ConnectCompleteEventHandler.datasource" />
+    <None Include="My Project\DataSources\ADODB.ConnectionEvents_DisconnectEventHandler.datasource" />
+    <None Include="My Project\DataSources\ADODB.ConnectionEvents_Event.datasource" />
+    <None Include="My Project\DataSources\ADODB.ConnectionEvents_ExecuteCompleteEventHandler.datasource" />
+    <None Include="My Project\DataSources\ADODB.ConnectionEvents_InfoMessageEventHandler.datasource" />
+    <None Include="My Project\DataSources\ADODB.ConnectionEvents_RollbackTransCompleteEventHandler.datasource" />
+    <None Include="My Project\DataSources\ADODB.ConnectionEvents_SinkHelper.datasource" />
+    <None Include="My Project\DataSources\ADODB.ConnectionEvents_WillConnectEventHandler.datasource" />
+    <None Include="My Project\DataSources\ADODB.ConnectionEvents_WillExecuteEventHandler.datasource" />
+    <None Include="My Project\DataSources\ADODB.Error.datasource" />
+    <None Include="My Project\DataSources\ADODB.Errors.datasource" />
+    <None Include="My Project\DataSources\ADODB.Field.datasource" />
+    <None Include="My Project\DataSources\ADODB.Field15.datasource" />
+    <None Include="My Project\DataSources\ADODB.Field20.datasource" />
+    <None Include="My Project\DataSources\ADODB.Fields.datasource" />
+    <None Include="My Project\DataSources\ADODB.Fields15.datasource" />
+    <None Include="My Project\DataSources\ADODB.Fields20.datasource" />
+    <None Include="My Project\DataSources\ADODB.InternalError.datasource" />
+    <None Include="My Project\DataSources\ADODB.InternalErrors.datasource" />
+    <None Include="My Project\DataSources\ADODB.InternalField.datasource" />
+    <None Include="My Project\DataSources\ADODB.InternalFields.datasource" />
+    <None Include="My Project\DataSources\ADODB.InternalParameter.datasource" />
+    <None Include="My Project\DataSources\ADODB.InternalParameters.datasource" />
+    <None Include="My Project\DataSources\ADODB.InternalProperties.datasource" />
+    <None Include="My Project\DataSources\ADODB.InternalProperty.datasource" />
+    <None Include="My Project\DataSources\ADODB.Parameter.datasource" />
+    <None Include="My Project\DataSources\ADODB.ParameterClass.datasource" />
+    <None Include="My Project\DataSources\ADODB.Parameters.datasource" />
+    <None Include="My Project\DataSources\ADODB.Properties.datasource" />
+    <None Include="My Project\DataSources\ADODB.Property.datasource" />
+    <None Include="My Project\DataSources\ADODB.Record.datasource" />
+    <None Include="My Project\DataSources\ADODB.RecordClass.datasource" />
+    <None Include="My Project\DataSources\ADODB.Recordset.datasource" />
+    <None Include="My Project\DataSources\ADODB.Recordset15.datasource" />
+    <None Include="My Project\DataSources\ADODB.Recordset20.datasource" />
+    <None Include="My Project\DataSources\ADODB.Recordset21.datasource" />
+    <None Include="My Project\DataSources\ADODB.RecordsetClass.datasource" />
+    <None Include="My Project\DataSources\ADODB.RecordsetEvents.datasource" />
+    <None Include="My Project\DataSources\ADODB.RecordsetEventsVt.datasource" />
+    <None Include="My Project\DataSources\ADODB.RecordsetEvents_EndOfRecordsetEventHandler.datasource" />
+    <None Include="My Project\DataSources\ADODB.RecordsetEvents_Event.datasource" />
+    <None Include="My Project\DataSources\ADODB.RecordsetEvents_FetchCompleteEventHandler.datasource" />
+    <None Include="My Project\DataSources\ADODB.RecordsetEvents_FetchProgressEventHandler.datasource" />
+    <None Include="My Project\DataSources\ADODB.RecordsetEvents_FieldChangeCompleteEventHandler.datasource" />
+    <None Include="My Project\DataSources\ADODB.RecordsetEvents_MoveCompleteEventHandler.datasource" />
+    <None Include="My Project\DataSources\ADODB.RecordsetEvents_RecordChangeCompleteEventHandler.datasource" />
+    <None Include="My Project\DataSources\ADODB.RecordsetEvents_RecordsetChangeCompleteEventHandler.datasource" />
+    <None Include="My Project\DataSources\ADODB.RecordsetEvents_SinkHelper.datasource" />
+    <None Include="My Project\DataSources\ADODB.RecordsetEvents_WillChangeFieldEventHandler.datasource" />
+    <None Include="My Project\DataSources\ADODB.RecordsetEvents_WillChangeRecordEventHandler.datasource" />
+    <None Include="My Project\DataSources\ADODB.RecordsetEvents_WillChangeRecordsetEventHandler.datasource" />
+    <None Include="My Project\DataSources\ADODB.RecordsetEvents_WillMoveEventHandler.datasource" />
+    <None Include="My Project\DataSources\ADODB.Stream.datasource" />
+    <None Include="My Project\DataSources\ADODB.StreamClass.datasource" />
+    <None Include="My Project\DataSources\ADODB._ADO.datasource" />
+    <None Include="My Project\DataSources\ADODB._Collection.datasource" />
+    <None Include="My Project\DataSources\ADODB._Command.datasource" />
+    <None Include="My Project\DataSources\ADODB._Connection.datasource" />
+    <None Include="My Project\DataSources\ADODB._DynaCollection.datasource" />
+    <None Include="My Project\DataSources\ADODB._Parameter.datasource" />
+    <None Include="My Project\DataSources\ADODB._Record.datasource" />
+    <None Include="My Project\DataSources\ADODB._Recordset.datasource" />
+    <None Include="My Project\DataSources\ADODB._Stream.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Accent.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Actions.CloseTabItemAction.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Actions.SetFlyoutOpenAction.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Behaviours.BorderlessWindowBehavior.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Behaviours.GlowWindowBehavior.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Behaviours.ReloadBehavior.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Behaviours.StylizedBehaviorCollection.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Behaviours.StylizedBehaviors.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Behaviours.TiltBehavior.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Behaviours.WindowsSettingBehaviour.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.BaseMetroTabControl+TabItemClosingEventArgs.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.BaseMetroTabControl+TabItemClosingEventHandler.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.BaseMetroTabControl.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.ClosingWindowEventHandlerArgs.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.ComboBoxHelper.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.ControlsHelper.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.CustomValidationPopup.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.FlipView.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.Flyout.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.FlyoutsControl.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.Glow.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.GlowWindow.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.IPanoramaTile.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.IWindowPlacementSettings.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.LayoutInvalidationCatcher.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.MessageDialog.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.MessageDialogSettings.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.MetroAnimatedSingleRowTabControl.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.MetroAnimatedTabControl.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.MetroContentControl.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.MetroImage.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.MetroProgressBar.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.MetroTabControl.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.MetroTabItem.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.MetroWindow.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.Panorama.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.PanoramaGroup.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.PanoramaTile.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.Pivot.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.PivotItem.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.Planerator.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.ProgressIndicator.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.ProgressRing.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.RangeSelectionChangedEventArgs.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.RangeSelectionChangedEventHandler.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.RangeSlider.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.RevealImage.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.ScrollViewerOffsetMediator.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.TextboxHelper.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.Tile.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.ToggleSwitch.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.ToggleSwitchButton.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.TransitioningContentControl.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.TreeHelper.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.WidthPercentageConverter.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.WindowButtonCommands+ClosingWindowEventHandler.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.WindowButtonCommands.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.WindowCommands.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Controls.WindowSettings.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Converters.BackgroundToForegroundConverter.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Converters.FontSizeOffsetConverter.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Converters.MarkupConverter.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Converters.OffOnConverter.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Converters.PanoramaGroupHeaderConverter.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Converters.PanoramaGroupHeightConverter.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Converters.PanoramaGroupWidthConverter.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Converters.ThicknessToDoubleConverter.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Converters.ToLowerConverter.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Converters.ToUpperConverter.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Converters.TreeViewItemExtensions.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Converters.TreeViewMarginConverter.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Native.APPBARDATA.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Native.Constants.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Native.MARGINS.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Native.MINMAXINFO.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Native.MONITORINFO.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Native.POINT.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Native.RECT.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.Native.WINDOWPLACEMENT.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.OnThemeChangedEventArgs.datasource" />
+    <None Include="My Project\DataSources\MahApps.Metro.ThemeManager.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <AppDesigner Include="My Project\" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Alpha.ico" />
+    <Resource Include="appbar.navigate.last.png" />
+    <Resource Include="appbar.navigate.next.png" />
+    <Resource Include="appbar.navigate.previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="appbar.navigate.first.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="appbar.close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="appbar.arrow.left.png" />
+    <Resource Include="appbar.arrow.right.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="ADODB">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.CrystalReports.Engine">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ClientDoc">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommLayer">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommonControls">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommonObjectModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.Controllers">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CubeDefModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.DataDefModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.DataSetConversion">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ObjectFactory">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.Prompting">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ReportDefModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.XmlSerialize">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportSource">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Shared">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="FlashControlV71">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="HCare.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="log4net">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="MahApps.Metro.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.AnalysisServices">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.AnalysisServices.SPClient.Interfaces">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.ConnectionInfo">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.ConnectionInfoExtended">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Diagnostics.STrace">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Dmf">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Dmf.Adapters">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.DmfSqlClrWrapper">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Dts.Design">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.DtsMsg">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.DTSPipelineWrap">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.ManagedDTS">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Management.Sdk.Sfc">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Management.SmoMetadataProvider">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Management.SqlParser">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Msxml6_interop">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.PipelineHost">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Rmo">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.ServiceBrokerEnum">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Smo">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.SqlClrProvider">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.SqlEnum">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.SqlWmiManagement">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.WmiEnum">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="SAPBusinessObjects.WPF.Viewer">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="SAPBusinessObjects.WPF.ViewerShared">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="ShockwaveFlashObjects">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="stdole">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Alpha1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Icons_Dark\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons_Light\appbar.add.png" />
+    <Resource Include="Icons_Light\appbar.archive.png" />
+    <Resource Include="Icons_Light\appbar.edit.png" />
+    <Resource Include="Icons_Light\appbar.magnify.png" />
+    <Resource Include="Icons_Light\appbar.printer.text.png" />
+    <Resource Include="Icons_Light\appbar.save.png" />
+    <Resource Include="Icons_Light\appbar.undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Notify.wav" />
+    <Resource Include="Icons_Light\CO.png" />
+    <Resource Include="Icons_Light\Pat.png" />
+    <Content Include="Resources\Notify.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+</Project>
